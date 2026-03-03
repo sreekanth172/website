@@ -437,6 +437,67 @@ header.scrolled {
     opacity: 1;
 }
 
+.coming-soon-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.poster-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 2/3;
+    border: 1px solid var(--color-border);
+    cursor: pointer;
+}
+
+.poster-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+    filter: grayscale(30%);
+}
+
+.poster-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 3rem 1.5rem 1.5rem;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: var(--transition-smooth);
+}
+
+.poster-card:hover img {
+    transform: scale(1.05);
+    filter: grayscale(0%);
+}
+
+.poster-card:hover .poster-overlay {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.poster-overlay h4 {
+    color: var(--color-accent);
+    font-size: 1.4rem;
+    margin-bottom: 0.3rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-family: var(--font-heading);
+}
+
+.poster-overlay p {
+    color: var(--color-text-main);
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+}
+
 .testimonial-slider {
     max-width: 800px;
     margin: 0 auto;
