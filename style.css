@@ -235,20 +235,14 @@ header.scrolled {
     overflow: hidden;
 }
 
-.video-background {
+.image-background {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: 0;
-    background: url('https://share.google/jJOmNpOHZUSJpZOMu') center/cover no-repeat;
-}
-
-.video-background video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    background: url('bg.avif') center/cover no-repeat;
     opacity: 0.6;
 }
 
