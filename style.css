@@ -184,7 +184,9 @@ header.scrolled {
 
 .logo {
     display: flex;
+    flex-direction: row;
     align-items: center;
+    flex-wrap: nowrap;
     gap: 0.8rem;
     font-family: var(--font-heading);
     font-size: 1.5rem;
@@ -192,6 +194,7 @@ header.scrolled {
     color: var(--color-accent);
     letter-spacing: 2px;
     text-transform: uppercase;
+    white-space: nowrap;
 }
 
 .logo-img {
