@@ -596,7 +596,8 @@ header.scrolled {
 }
 
 .form-group input,
-.form-group textarea {
+.form-group textarea,
+.form-group select {
     width: 100%;
     padding: 1rem;
     background: rgba(255, 255, 255, 0.05);
@@ -605,10 +606,22 @@ header.scrolled {
     font-family: var(--font-body);
     border-radius: 2px;
     transition: var(--transition-smooth);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.form-group select {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23d4af37' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1.2rem;
+    cursor: pointer;
 }
 
 .form-group input:focus,
-.form-group textarea:focus {
+.form-group textarea:focus,
+.form-group select:focus {
     outline: none;
     border-color: var(--color-accent);
     background: rgb(0, 0, 0);
@@ -616,6 +629,22 @@ header.scrolled {
 
 .submit-btn {
     width: 100%;
+}
+
+.form-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.form-buttons .btn {
+    flex: 1;
+}
+
+@media (max-width: 480px) {
+    .form-buttons {
+        flex-direction: column;
+    }
 }
 
 .footer-content {
@@ -807,10 +836,3 @@ header.scrolled {
         box-shadow: 0 0 0 0 rgba(255, 59, 59, 0);
     }
 }
-
-
-
-
-
-
-
