@@ -87,10 +87,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const name = document.getElementById('name').value;
             const email = document.getElementById('email').value;
-            const message = document.getElementById('message').value;
+            const service = document.getElementById('service').value;
 
             const subject = encodeURIComponent(`New Inquiry from ${name}`);
-            const body = encodeURIComponent(`You have received a new message from your website contact form.\n\nName: ${name}\nEmail: ${email}\n\nMessage:\n${message}`);
+            const body = encodeURIComponent(`You have received a new contact request from your website.\n\nName: ${name}\nEmail: ${email}\nInterested Service: ${service}`);
 
             window.location.href = `mailto:thedirectorsview16@gmail.com?subject=${subject}&body=${body}`;
 
