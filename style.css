@@ -769,6 +769,32 @@ header.scrolled {
     }
 }
 
+/* Instagram Floating Button */
+.instagram-float {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 35px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: var(--transition-smooth);
+}
+
+.instagram-float:hover {
+    color: #fff;
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(220, 39, 67, 0.4);
+}
+
 /* WhatsApp Floating Button */
 .whatsapp-float {
     position: fixed;
